@@ -395,6 +395,15 @@ MICROSOFT_CLIENT_LOGIN_BASE_URL = PersistentConfig(
     ),
 )
 
+MICROSOFT_GRAPH_API_BASE_URL = PersistentConfig(
+    "MICROSOFT_GRAPH_API_BASE_URL",
+    "oauth.microsoft.graph_url",
+    os.environ.get(
+        "MICROSOFT_GRAPH_API_BASE_URL",
+        "https://graph.microsoft.com/v1.0"
+    )
+)
+
 MICROSOFT_CLIENT_PICTURE_URL = PersistentConfig(
     "MICROSOFT_CLIENT_PICTURE_URL",
     "oauth.microsoft.picture_url",
